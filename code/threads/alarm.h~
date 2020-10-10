@@ -28,8 +28,8 @@ class Bedroom{
   public:
     Bedroom():_current_interrupt(0) {};
     void PutToBed(Thread* t, int x);
-    bool MorningCall();
-    bool IsEmpty();
+  bool MorningCall();
+  bool IsEmpty();
   private:
     class Bed{
 	public:
