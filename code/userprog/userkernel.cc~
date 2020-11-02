@@ -47,10 +47,10 @@ UserProgKernel::UserProgKernel(int argc, char **argv)
 		cout << "	./nachos -e file1 -e file2 : executing file1 and file2."  << endl;
 	}
 	else if (strcmp(argv[i], "-prio") == 0){
-	    execfilePriority[execfileNum] = atoi(argv[++i]);
+	    exefilePriority[execfileNum] = atoi(argv[++i]);
 	}
 	else if (strcmp(argv[i], "-burst") == 0){
-	    execfileBurstTime[execfileNum] = atoi(argv[++i]);
+	    exefileBurstTime[execfileNum] = atoi(argv[++i]);
 	}
     }
 }

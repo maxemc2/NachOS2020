@@ -189,7 +189,6 @@ Thread::Finish ()
     if (strcmp(name, "main") != 0){
 	kernel->addTotalWaiting(totalWaiting + startTime - arrivalTime);
     }
-    #endif
 
     DEBUG(dbgThread, "Finishing thread: " << name);
     

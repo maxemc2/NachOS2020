@@ -89,11 +89,6 @@ class Thread {
 					// NOTE -- thread being deleted
 					// must not be running when delete 
 					// is called
-    // time record
-    int startTime;
-    int arrivalTime;
-    int totalBurst;
-    int totalWaiting;
 
     // basic thread operations
 
