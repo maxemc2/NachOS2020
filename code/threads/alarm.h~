@@ -24,9 +24,9 @@
 #include <list>
 #include "thread.h"
 
-class SleepList{
+class SleepThreads{
   public:
-    SleepList():currentInterrupt(0) {};
+    SleepThreads():currentInterrupt(0) {};
     void Sleep(Thread* t, int x);
     bool Ready();
     bool IsEmpty();
@@ -54,7 +54,7 @@ class Alarm : public CallBackObj {
     Timer *timer;		// the hardware timer device
     void CallBack();		// called when the hardware
 				// timer generates an interrupt
-    SleepList sleepList;
+    Sleepthreads sleepThreads;
 };
 
 #endif // ALARM_H

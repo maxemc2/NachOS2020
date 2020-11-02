@@ -33,8 +33,13 @@ CPP = /lib/cpp
 INCDIR =-I../userprog -I../threads -I../lib
 CFLAGS = -G 0 -c $(INCDIR)
 
+<<<<<<< HEAD
 all: halt shell matmult sort test1 test2 test3
 
+=======
+all: sleep
+#alt shell matmult sort test1 test2 example
+>>>>>>> fdd8b1f01f99482c2e3edda1437aac4bcda91782
 start.o: start.s ../userprog/syscall.h
 	$(CPP) $(CPPFLAGS) start.s > strt.s
 	$(AS) $(ASFLAGS) -o start.o strt.s
@@ -64,6 +69,10 @@ matmult: matmult.o start.o
 	$(LD) $(LDFLAGS) start.o matmult.o -o matmult.coff
 	../bin/coff2noff matmult.coff matmult
 
+example: example.o start.o
+	$(LD) $(LDFLAGS) start.o example.o -o example.coff
+	../bin/coff2noff example.coff example
+
 test1: test1.o start.o
 	$(LD) $(LDFLAGS) start.o test1.o -o test1.coff
 	../bin/coff2noff test1.coff test1
@@ -74,3 +83,10 @@ test3: test3.o start.o
 	$(LD) $(LDFLAGS) start.o test3.o -o test3.coff
 	../bin/coff2noff test3.coff test3
 
+test2: test2.o start.o
+	$(LD) $(LDFLAGS) start.o test2.o -o test2.coff
+	../bin/coff2noff test2.coff test2
+
+sleep: sleep.o start.o
+	$(LD) $(LDFLAGS) start.o sleep.o -o sleep.coff
+	../bin/coff2noff sleep.coff sleep
