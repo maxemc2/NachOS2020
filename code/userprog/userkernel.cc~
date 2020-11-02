@@ -21,7 +21,7 @@ UserProgKernel::UserProgKernel(int argc, char **argv)
 		: ThreadedKernel(argc, argv)
 {
     debugUserProg = FALSE;
-    execfileNum = 0;
+    execfileNum=0;
 
     totalWaiting = 0;
     memset(execfilePriority, 0, 10);
@@ -103,7 +103,7 @@ UserProgKernel::Run()
 {
 
 	cout << "Total threads number is " << execfileNum << endl;
-	for (int n=1;n <= execfileNum; n++)
+	for (int n=1;n<=execfileNum;n++)
 	{
 	    t[n] = new Thread(execfile[n]);
 	    t[n]->space = new AddrSpace();

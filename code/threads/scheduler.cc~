@@ -56,13 +56,13 @@ Scheduler::Scheduler(SchedulerType type)
         	readyList = new List<Thread *>;
         	break;
     	case SJF:
-		readyList = new SortedList<Thread *>(SJFCompare);
+		/* todo */
         	break;
     	case Priority:
 		readyList = new SortedList<Thread *>(PriorityCompare);
         	break;
     	case FIFO:
-		readyList = new List<Thread *>;
+		/* todo */
 		break;
    	}
 	toBeDestroyed = NULL;

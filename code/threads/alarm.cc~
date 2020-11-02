@@ -56,11 +56,6 @@ Alarm::CallBack()
     if (status == IdleMode) {	// is it time to quit?
         if (!interrupt->AnyFutureInterrupts()) {
 	    timer->Disable();	// turn off the timer
-	    //print average waiting time
-
-	    #ifdef USER_PROGRAM
-	    cout << "Average waiting time: " << (float)kernel->getTotalWaiting() / kernel->getexecfileNum() << endl;
-	    #endif
 	}
     } else {			// there's someone to preempt
 	if(kernel->scheduler->getSchedulerType() == RR ||
