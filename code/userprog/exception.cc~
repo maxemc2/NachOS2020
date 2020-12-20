@@ -88,10 +88,6 @@ ExceptionHandler(ExceptionType which)
 		/*    Page Fault Exception    */
 		cerr<<"page fault"<<"\n";
 	    break;
-	case BusErrorException:
-		/*    Page Fault Exception    */
-		cerr<<"segment fault"<<"\n";
-	    break;
 	default:
 	    cerr << "Unexpected user mode exception" << which << "\n";
 	    break;

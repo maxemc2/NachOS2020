@@ -149,8 +149,7 @@ AddrSpace::Load(char *fileName)
 	if (noffH.code.size > 0) {
 	    for(unsigned int j=0, i=0;i<numPages; i++){
 		j=0;
-		while(kernel->machine->usedPhyPage[j]!=FALSE && j<NumPhysPages)
-		    j++;
+		while(kernel->machine->usedPhyPage[j]!=FALSE && j<NumPhysPages)j++;
 		if(j<NumPhysPages){
 		    kernel->machine->usedPhyPage[j] = TRUE;
 		    kernel->machine->PhyPageName[j] = ID;
